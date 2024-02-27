@@ -1,0 +1,91 @@
+.navbar-custom{
+    height: 80px;
+    padding-top: 10px;
+}
+.first-navbar a{
+  font-size: 22px;
+}
+
+
+.second-navbar{
+  margin-top: -20px;
+  padding-top: 10px ;
+  padding-bottom: 10px ;
+  background-color: #343541;  
+}
+
+.second-navbar li a{
+  color: white;
+  font-size: 18px;
+  
+}
+
+.firstpart{
+  margin-top: 130px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  
+ }
+ .advert{
+  margin-left: 80px;
+  width: 530px;
+  height: 500px;
+  
+ }
+
+.carousel-inner .item img{
+width: 700px;
+height: 500px;
+object-fit: cover;
+
+}
+
+.flex-container{
+  padding-left: 80px;
+  padding-right: 50px;
+}
+
+
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
+.second-container{
+  padding-left: 80px;
+  padding-right: 50px;
+}
+.thumbnail{
+  z-index: -1;
+  transition: all 0.3s;
+}
+.thumbnail:hover{
+  transform: scale(1.1);
+}
+
+
+.second-container .thumbnail{
+  width: 300px;
+  height: 350px;
+  
+}
+
+
+.footer{
+  background-color: beige;
+ 
+  
+}
+hr.solid {
+  border-top: 2px solid #bbb;
+}
+.features{
+  padding-left: 80px;
+ padding-right: 50px;
+
+}
+.features a{
+  font-size: larger;
+}
