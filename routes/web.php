@@ -111,3 +111,8 @@ Route::get('/bird',[HomeController::class,'redirectbird']);
 
 // for product detail
 Route::get('/product_details/{product_id}',[ProductController::class,'product_detail']);
+
+// end of product detail
+
+// for add to cart
+Route::post('/add_cart/{product_id}',[HomeController::class,'add_cart']);

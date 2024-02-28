@@ -50,7 +50,7 @@
                         <p class="card-text">{{$products->description}}</p>
                         <p>Price: Rs.{{$products->price}}</p>
                         
-                        <form action="">
+                        <form action="{{url('add_cart', $product->product_id)}}" method="POST">
                             @csrf
                             Quantity: <input type="number" name="" id="" min="0" class="form-control-sm" placeholder="Select Quantity">
                             <div class="row" style="padding-top:10px ">

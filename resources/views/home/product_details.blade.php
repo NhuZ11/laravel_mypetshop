@@ -68,7 +68,8 @@
                 </div>
             </div>
             <div>
-                <h3>Reviews:</h3>
+                <h3>Add comment:</h3>
+                <input type="textbox" name="" id="" style="width: 300px;">
             </div>
            
         </div>
