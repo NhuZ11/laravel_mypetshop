@@ -54,7 +54,7 @@
                     <p>Description: {{$product->description}}</p>
                     <form action="">
                         @csrf
-                        Quantity: <input type="number" name="" id="" min="0" class="form-control-sm" placeholder="Select Quantity">
+                        Quantity: <input type="number" name="quantity" id="" min="0" class="form-control-sm" placeholder="Select Quantity">
                         <div class="row" style="padding-top:10px ">
                             <div class="col-sm-3">
                                 <a href="#" class="btn btn-primary">Add To Cart</a>
