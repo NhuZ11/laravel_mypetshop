@@ -63,10 +63,10 @@
     </div>
 
     <div class="flex-container">
-        <h1 class="bg-primary">Select your pet</h1>
+        <h1 class="">Select your pet</h1>
     </div>
 
-    <div class="second-container">
+    <div class="second-container" style="margin-bottom: 12px">
         <div class="row">
             <div class="col-md-3 ">
               <div class="thumbnail">

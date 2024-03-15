@@ -29,11 +29,21 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+        <style>
+            .navbar{
+                padding-top: 4px;
+                padding-bottom: 5px;
+                z-index: 2;
+            }
+            .nav-items{
+               
+            }
+        </style>
     </head>
 
     <body>
         <div class="header">
-            <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top" data-spy="affix" data-offset-top="197" style="padding-top: 10px; padding-bottom: 10px">
+            <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top" data-spy="affix" data-offset-top="197" style="padding-top: 10px; padding-bottom: 10px  z-index:2;">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="{{url('index')}}">Pet Sansar</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +58,7 @@
                                 <a class="nav-link" href="#">Contact Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Cart</a>
+                                <a class="nav-link" href="{{url('show_cart')}}">Cart</a>
                             </li>
                             @if (Route::has('login'))
                             @auth
@@ -76,9 +86,14 @@
             
             {{-- second navbar begins here --}}
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"  style="top: 45px;">
+                            
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"  style="top: 55px; z-index:1;">
                 <div class="container-fluid">
                     <ul class="navbar-nav">
+                        <form class="d-flex my-2 my-lg-0" style="">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDogs" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dogs
@@ -110,10 +125,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex my-2 my-lg-0">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                    
                     
                 </div>
             </nav>

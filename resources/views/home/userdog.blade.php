@@ -52,7 +52,7 @@
                         
                         <form action="{{url('add_cart', $products->product_id)}}" method="POST">
                             @csrf
-                            Quantity: <input type="number" name="quantity" id="" min="0" max="{{$products->quantity}}" class="form-control-sm" placeholder="Select Quantity">
+                            Quantity: <input type="number" name="quantity" id="" min="0" max="{{$products->quantity}}" class="form-control-sm" placeholder="Select Quantity" required>
                             <div class="row" style="padding-top:10px ">
                                 <div class="col-sm-6">
                                    

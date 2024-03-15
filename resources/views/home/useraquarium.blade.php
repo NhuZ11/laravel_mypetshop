@@ -44,12 +44,26 @@
                 @foreach ($product as $products)
                 @if ($products->pet_type=='Aquarium')
                 <div class="card">
-                    <img src="/product/{{$products->image}}" class="card-img-top" alt="...">
+                    <a href="{{url('product_details',$products->product_id)}}"><img src="/product/{{$products->image}}" class="card-img-top" alt="..."></a>
                     <div class="card-body">
                         <h5 class="card-title">{{$products->product_name}}</h5>
                         <p class="card-text">{{$products->description}}</p>
-                        <p>Price:{{$products->price}}</p>
-                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                        <p>Price: Rs.{{$products->price}}</p>
+                        
+                        <form action="{{url('add_cart', $products->product_id)}}" method="POST">
+                            @csrf
+                            Quantity: <input type="number" name="quantity" id="" min="0" max="{{$products->quantity}}" class="form-control-sm" placeholder="Select Quantity" required>
+                            <div class="row" style="padding-top:10px ">
+                                <div class="col-sm-6">
+                                   
+                                    <input type="submit" name="" id="" class="btn btn-primary" value="Add To Cart">
+                                </div>
+                                <div class="col-sm-6" >
+                                    <a href="#" class="btn btn-success">Buy Now</a>
+                                </div>
+
+                            </div>
+                        </form>
                     </div>
                 </div>
                     

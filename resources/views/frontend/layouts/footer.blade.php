@@ -13,6 +13,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.1/js/bootstrap.bundle.min.js"></script>
 
     <link rel="stylesheet" href="{{ asset('frontend/css/whole.css') }}">
+    <style>
+      
+    </style>
 </head>
 <body>
     <div class="footer">

@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\cart;
+use App\Models\Order;
 
 class HomeController extends Controller
 {
@@ -68,6 +69,64 @@ class HomeController extends Controller
             return redirect('login');
          }
 
+    }
+
+    public function show_cart(){
+        if (Auth::id()){
+        $id=Auth::user()->id;
+
+        $cart=cart::where('user_id','=',$id)->get();
+        return view('home.showcart',compact('cart'));
+        }
+        else{
+            return redirect('login');
+        }
+    }
+
+
+    public function remove_cart($cart_id){
+        $cart=cart::where('cart_id', $cart_id);
+        $cart->delete();
+        return redirect()->back();
+
+    }
+
+
+    public function order_product($cart_id){
+        $cart=cart::where('cart_id', $cart_id)->get();
+        $orderid = null; 
+        foreach($cart as $carts)
+        {
+            $order= new Order;
+            $order->name=$carts->name;
+            $order->email=$carts->email;
+            $order->phone=$carts->phone;
+            $order->address=$carts->address;
+            $order->user_id=$carts->user_id;
+            $order->product_name=$carts->product_name;
+            $order->price=$carts->price;
+            $order->quantity=$carts->quantity;
+            $order->image=$carts->image;
+            $order->product_id=$carts->product_id;
+            $order->payment_status="....";
+            $order->delivery_status="processing";
+            $order->save();
+
+            $orderid=$order->id;
+
+            //deleting from cart after getting specific order
+            $cartid=$carts->cart_id;
+            $cart=cart::where('cart_id', $cartid);
+            $cart->delete();
+
+
+
+        }
+        echo $orderid;
+
+         $orders=order::where('order_id', $orderid)->get();
+
+        return view('home.order',compact('orders'));
     }
 
 

@@ -115,4 +115,13 @@ Route::get('/product_details/{product_id}',[ProductController::class,'product_de
 // end of product detail
 
 // for add to cart
-Route::post('/add_cart/{product_id}',[HomeController::class,'add_cart']);
+Route::post('/add_cart/{product_id}',[HomeController::class,'add_cart']);   
+
+// for show cart
+Route::get('/show_cart',[HomeController::class,'show_cart']);
+
+//for remove cart item
+Route::post('/remove_cart/{cart_id}',[HomeController::class,'remove_cart']);
+
+//for order product
+Route::post('/order_product/{cart_id}',[HomeController::class,'order_product']);
