@@ -9,12 +9,25 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\cart;
 use App\Models\Order;
+use App\Models\payment; 
+
+//for payment
+require '../vendor/autoload.php';
+use Cixware\Esewa\Client;
+use Cixware\Esewa\Config;
+
 
 class HomeController extends Controller
 {
     public function index(){
         
         return view('frontend.index');
+    }
+
+
+    //for contact us
+    public function contactus(){
+        return view('frontend.contact');
     }
 
 
@@ -122,13 +135,56 @@ class HomeController extends Controller
 
 
         }
-        echo $orderid;
+        
 
          $orders=order::where('order_id', $orderid)->get();
 
         return view('home.order',compact('orders'));
     }
 
+    //for eseswa payment
+    public function esewa(Request $request){
+        $pid=uniqid();
+        $amount=$request->price;
 
+        payment::insert([
+            'order_id'=> $request->order_id,
+            'name'=> $request->name,
+            'email'=> $request->email,
+            'user_id'=> $request->user_id,
+            'product_name'=> $request->prouctname,
+            'price'=> $request->price,
+            'payment_status'=> 'unverified',
+
+
+
+        ]);
+       
+       $successUrl = url('/success');
+       $failureUrl = url('/failure');
+
+       // Config for development.
+       $config = new Config($successUrl, $failureUrl);
+
+      // Config for production.
+       $config = new Config($successUrl, $failureUrl, 'b4e...e8c753...2c6e8b');
+
+       // Initialize eSewa client.
+       $esewa = new Client($config);
+
+       //this method accepts five parameters for payment
+    //    $esewa->process($pid, $amount, 0, 0, 0);
+    $esewa->process('P101W201', 100, 15, 0, 0);
+     
+     }
+
+     //for payment success
+     public function PaySuccess(){
+           echo"success";
+     }
+    // for payment failure
+    public function PayFailure(){
+        echo"failure";
+    }
 }
 

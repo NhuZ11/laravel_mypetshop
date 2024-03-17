@@ -37,6 +37,9 @@ Route::get('/index',function(){
     return view('frontend.index');
 });
 
+//for contact us
+Route::get('/contact',[HomeController::class,'contactus']);
+
 // this one below is for the redirecting to the respective user depending upon the email
 Route::get('/redirect',[AdminController::class,'redirect']);
 
@@ -125,3 +128,15 @@ Route::post('/remove_cart/{cart_id}',[HomeController::class,'remove_cart']);
 
 //for order product
 Route::post('/order_product/{cart_id}',[HomeController::class,'order_product']);
+
+
+//for payment
+Route::post('/pay',[HomeController::class,'esewa']);
+
+
+//for payment success
+Route::get('/success',[HomeController::class,'PaySuccess']);
+
+//for payment failure
+Route::get('/failure',[HomeController::class,'PayFailure']);
+

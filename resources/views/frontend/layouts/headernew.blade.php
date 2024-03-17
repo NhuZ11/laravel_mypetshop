@@ -52,10 +52,10 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active" aria-current="page" href="{{url('index')}}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact Us</a>
+                                <a class="nav-link" href="{{url('contact')}}">Contact Us</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{url('show_cart')}}">Cart</a>
