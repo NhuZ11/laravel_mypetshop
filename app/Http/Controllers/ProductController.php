@@ -103,4 +103,8 @@ class ProductController extends Controller
       }
       // end of product details
 
+
+     
+     
+
 }

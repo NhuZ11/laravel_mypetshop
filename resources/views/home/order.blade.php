@@ -26,11 +26,13 @@
             }
             table {
                text-align: center; /* Center align text within table cells */
-               width: 60%; /* Make the table take full width of its container */
+               width: 70%; /* Make the table take full width of its container */
             }
             table,th,td{
                 border: 1px solid grey;
                 align-items: center;
+                font-size: 20px;
+                font-weight: bold;
             }
             th{
                 font-size: 18px;
@@ -41,6 +43,9 @@
                 height: 200px;
                 width: 200px;
                 padding: 5px;   
+                display: block; /* To center the image */
+                margin: 0 auto; /* To center the image */
+                
             }
             .khaltilogo{
                 margin-top: 4px; 
@@ -67,7 +72,7 @@
                 
                 <td>{{$ord->product_name}}</td>
                 <td>{{$ord->quantity}}</td>
-                <td>{{$ord->price}}</td>
+                <td>Rs. {{$ord->price}}</td>
                 <td><img class="table-image" src="/product/{{$ord->image}}"></td>
                 <td class="action">
                     
@@ -97,7 +102,7 @@
             </tr>
             <tr>
                 <td colspan="2">Total Amount</td>
-                <td>{{$ord->price}}</td>
+                <td>Rs. {{$ord->price}}</td>
             </tr>
             @endforeach
         </table>

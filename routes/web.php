@@ -40,6 +40,16 @@ Route::get('/index',function(){
 //for contact us
 Route::get('/contact',[HomeController::class,'contactus']);
 
+
+
+//for footer
+Route::get('/underprogress',function(){
+    echo"coming soon";
+});
+
+Route::get('/aboutus',[HomeController::class,'aboutus']);
+
+
 // this one below is for the redirecting to the respective user depending upon the email
 Route::get('/redirect',[AdminController::class,'redirect']);
 

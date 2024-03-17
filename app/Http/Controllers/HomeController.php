@@ -30,6 +30,11 @@ class HomeController extends Controller
         return view('frontend.contact');
     }
 
+    //for about us
+    public function aboutus(){
+        return view('frontend.aboutus');
+    }
+
 
     public function redirectdog(){
         $product=Product::paginate(12);

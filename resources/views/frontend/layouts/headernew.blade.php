@@ -94,7 +94,7 @@
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
-                        <li class="nav-item dropdown">
+                        {{-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDogs" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dogs
                             </a>
@@ -103,8 +103,8 @@
                                 <li><a class="dropdown-item" href="#">retriever</a></li>
                                 <li><a class="dropdown-item" href="#">snoop</a></li>
                             </ul>
-                        </li>
-                        <li class="nav-item dropdown">
+                        </li> --}}
+                        {{-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCats" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Cats
                             </a>
@@ -113,15 +113,19 @@
                                 <li><a class="dropdown-item" href="#">sphynix</a></li>
                                 <li><a class="dropdown-item" href="#">local</a></li>
                             </ul>
-                        </li>
+                        </li> --}}
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBreed" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Select By Breed
+                               Category
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownBreed">
-                                <li><a class="dropdown-item" href="#">Page 1-1</a></li>
-                                <li><a class="dropdown-item" href="#">Page 1-2</a></li>
-                                <li><a class="dropdown-item" href="#">Page 1-3</a></li>
+                               
+                                <li><a class="dropdown-item" href="#">Toy</a></li>
+                                <li><a class="dropdown-item" href="#">Food</a></li>
+                                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                                <li><a class="dropdown-item" href="#">Medicine</a></li>
+                                <li><a class="dropdown-item" href="#">Shelter</a></li>
+                                
                             </ul>
                         </li>
                     </ul>
