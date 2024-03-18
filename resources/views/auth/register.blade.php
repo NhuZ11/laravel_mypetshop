@@ -2,7 +2,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <p style="font-size: 32px; margin-bottom: 0px;"><b>Register</b></p>
         </x-slot>
 
         <x-validation-errors class="mb-4" />

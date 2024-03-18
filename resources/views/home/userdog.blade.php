@@ -59,7 +59,7 @@
                                     <input type="submit" name="" id="" class="btn btn-primary" value="Add To Cart">
                                 </div>
                                 <div class="col-sm-6" >
-                                    <a href="#" class="btn btn-success">Buy Now</a>
+                                    <a href="#" onclick="return alert('Add to Cart first.')" class="btn btn-success">Buy Now</a>
                                 </div>
 
                             </div>
@@ -85,6 +85,7 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+        
     </body>
 </html>
 @endsection
